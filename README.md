@@ -1,5 +1,5 @@
 # 웹프로그래밍
-JAVA 3주차
+##JAVA 3주차
 ------------
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -34,9 +34,8 @@ JAVA 3주차
 
 </body>
 </html>
---------
-아가랑
-------
+##아가랑
+--
 웹프로그래밍
 자바 프로젝트와 마찬가지로 쇼핑몰 앱을 진행 함에 있어서 웹프로그래밍은 하지 않고 있지만 웹프로그래밍을 배우면서
 웹으로도 쇼핑몰을 진행해보겠습니다.
