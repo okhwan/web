@@ -33,21 +33,25 @@
 </head>
 <body>
 <center>
-	<h1>아가랑 회원 가입 </h1>
+	<h1>아가랑 구매자 로그인 </h1>
 	<hr>
 	<form action="insertDB.jsp" name="user_info" 
 		method="post" onsubmit="return checkFun()">
 		<fieldset style="width:230px">
 			<legend> 회원 가입 화면 </legend><p>
 	
-			아이디 : <br>
+			아이디  <br>
 			<input type="text" size = "16" name="userID"><br><br>
 		
-			비밀번호 : <br> 
+			비밀번호  <br> 
 			<input type="password" size = "16" name="userPW"><br><br>
 			
-			이메일 : <br>
-			<input type="email" size="30" name="userMAIL"><br><br>		
+			이름 <br>
+			<input type="name" size="30" name="userNAME"><br><br>
+			
+			이메일  <br>
+			<input type="email" size="30" name="userMAIL"><br><br>	
+				
 			<input type="reset" value=" ◀ 다시작성 ">
 			<input type="submit" value=" 가입하기 ▶ ">
 			<br><br>
