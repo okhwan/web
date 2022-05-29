@@ -6,9 +6,11 @@
 	String u_id = request.getParameter("userID");
 	String u_pw = request.getParameter("userPW");
 	String u_mail = request.getParameter("userMAIL");
+	String u_name = request.getParameter("userNAME");
 	
-	String sql = "INSERT INTO members(id, passwd, email) VALUES";
-	sql += "('" + u_id + "','" + u_pw + "','" + u_mail + "')";
+	String sql = "INSERT INTO members(id, passwd, email, name) VALUES";
+	sql += "('" + u_id + "','" + u_pw + "','" + u_mail + "','"+
+	u_name +"')";
 
 	Statement sm = conn.createStatement();
 	
