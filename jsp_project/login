@@ -29,10 +29,9 @@
 </head>
 <body>
 	<center>
-	<h1>아가랑 로그인 </h1>
+	<h1>아가랑 판매자 로그인 </h1>
 	<hr>
-	<form name="loginForm" action="loginSuccess.jsp" 
-		method="post" onsubmit="return checkFun()" >
+	<form action="seller_DrawCheck.jsp" name="user_info" method="post">
 			<table>
 			<tr height="30">
 				<td align="right">아이디&nbsp;</td>
