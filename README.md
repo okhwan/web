@@ -17,7 +17,10 @@ JSP 프로젝트는 매주 JSP_PROJECT 디렉터리에 파일을 추가해나가
 로 상품 테이블에는 cell_id를 두어서 celler 테이블에 판매자 id를 외래키로 설정하여서
 판매자는 로그인 시 본인 물품을 수정하려하면   
 본인 id를 따와서 본인 물품만 나와 수정할 수 있도록 만들었습니다.   
-아래는 각 jsp파일에 대한 순서를 나열했습니다.
+
+# 아래는 각 jsp파일에 대한 순서를 나열했습니다.   
+   
+
 ![KakaoTalk_20220606_221403873](https://user-images.githubusercontent.com/95335311/172167746-7e14f0c8-40db-4dfd-b44d-a70cd6ddce98.jpg)
 
 
