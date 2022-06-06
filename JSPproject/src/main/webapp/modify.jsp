@@ -1,57 +1,59 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    <%@ page import="java.sql.*" %>
-<%@ include file = "dbConn.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title> »óÇ° ¼öÁ¤ ÆäÀÌÁö</title>
+	<center>
+	<meta charset="UTF-8">
+	<title> Login Form </title>
+	<script type="text/javascript">	
+		function checkFun() 
+		{
+			var f = document.loginForm;
+			if(f.uID.value == "")
+			{
+				alert("ê°€ê²©ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
+				f.uID.focus();
+				return false;
+			}
+			else if(f.uPW.value == "")
+			{
+				alert("ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
+				f.uPW.focus();
+				return false;
+			}
+			else return true;
+		}		
+	</script>
+	</center>	
 </head>
-<body> 
-	<center><h1>»óÇ° ¼öÁ¤ ÆäÀÌÁö</h1></center>
-	<% 
-	String real = (String)session.getAttribute("prId"); //productÀÇ ÁÖ¹®ÀÚ ¾ÆÀÌµğ, »óÇ° ¼öÁ¤¸¸ÇÏ¸é ³¡
-	String sql = "SELECT * FROM product WHERE pr_id = ?";
-	String sql1 = "SELECT * FROM members WHERE id = ?";
-	PreparedStatement sm = conn.prepareStatement(sql);
-	PreparedStatement sm1 = conn.prepareStatement(sql1);
-	sm.setString(1, pr_id);
-	sm1.setString(1, real);
-	ResultSet rs = sm.executeQuery();
-	ResultSet rs1 = sm1.executeQuery();
-	int sum = 0;
-	String pr = "";
-	String str = "";
-	while(rs.next() && rs1.next()){
-		str += "<center>" + rs.getString("pr_name") + "¸¦ ±¸¸Å ÇÏ½Ã°Ú½À´Ï±î?" + "<br>±İ¾×: " + rs.getInt("price")
-		+ "   ÇöÀç ¼ÒÀ¯ ±İ¾×: " + rs1.getInt("wallet") +"</center>";
-		sum =  rs1.getInt("wallet") - rs.getInt("price");
-		pr = rs.getString("pr_id");
-	}
-	out.print(str);
-	if(sum<0){
-		out.print("<br><center>¼ÒÀ¯ ±İ¾×ÀÌ ºÎÁ·ÇÏ¿© ±¸¸Å°¡ ºÒ°¡´É ÇÕ´Ï´Ù.<br></center>"
-				+ "<center><form action='Product_list.jsp' method='post' >"
-				+ "<input type='submit' value='»óÇ° ¸ñ·Ï °¡±â'><br></form>");
-		out.print(
-				"<form action='money_charge.jsp' method='post' >"
-				+ "<input type='submit' value='±İ¾× ÃæÀü ÇÏ±â' >"
-				+ "</form></center>");		
-	}
-	else{
-		session.setAttribute("PR_ID", pr);
-		out.print("<br><center><form action='buy_success.jsp' method='post'>"
-				+ "<input type='submit' value='±¸¸ÅÇÏ±â'>"
-				+ "</form></center>");
-	}
-	
-	rs.close();
-    sm.close();
-    rs1.close();
-    sm1.close();
-    conn.close(); 
+<body>
+<%
+	String pr_id = request.getParameter("PR_ID");
+	session.setAttribute("prId", pr_id);
 	%>
-	
+	<center>
+	<h1>íŒë§¤ì ë¬¼í’ˆ ìˆ˜ì • </h1>
+	<hr>
+	<form action="modify_drawcheck.jsp" name="user_info" method="post">
+			<table>
+			<tr height="30">
+				<td align="right">ê°€ê²©&nbsp;</td>
+				<td><input type="text" name="Price"></td>
+			</tr>
+			</table>
+			<table>
+			<tr height="30">
+				<td align="right">ìˆ˜ëŸ‰&nbsp;</td>
+				<td><input type="text" name="Quan"></td>
+			</tr>
+			</table>
+			<tr height="50">
+				<td></td>
+				<td><input type="submit" value=" ìˆ˜ì •í•˜ê¸° "></td>
+			</tr>
+	</form>
+	</center>
 </body>
 </html>
+

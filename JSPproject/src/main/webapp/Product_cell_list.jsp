@@ -15,7 +15,6 @@
    <table border="1">
    <% 
    	  String real = (String)session.getAttribute("prId");
-      String u_pw = request.getParameter("uPW");
       String sql = "SELECT * FROM product WHERE cell_id=?";
       PreparedStatement sm = conn.prepareStatement(sql);
   	  sm.setString(1, real);
@@ -35,9 +34,12 @@
         out.print("<tr> <td>상품 번호</td> <td>상품 이름</td>  <td>상품 가격</td> <td>수량</td> <td>구매</td> </tr>");
         out.print(str);
     
+    
       rs.close();
       sm.close();
       conn.close();   
+      out.print("<center><form action='insert_product.jsp' method='post'>" +
+  			"<input type='submit' value='물품 추가 하기'><br></form></center>");
    %>
         
 </body>
