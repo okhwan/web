@@ -28,10 +28,12 @@
             str += "<tr>" + "<td align = 'center'>"+ rs.getString("pr_id") + "</td>" + "<td>" + rs.getString("pr_name") + "</td>" + "<td>" +  rs.getInt("price")
                + "</td>" + "<td>" + rs.getString("quan") + "</td>" + 
                "<td><center><a href='modify.jsp?PR_ID=" + rs.getString("pr_id") + 
-               "'> 상품 수정 </a> </center></td>" 
+               "'> 상품 수정 </a> </center></td>"+
+            		   "<td><center><a href='delete.jsp?PR_ID=" + rs.getString("pr_id") + 
+                       "'> 삭제 </a> </center></td>"
    				+ "</tr>";
          } 
-        out.print("<tr> <td>상품 번호</td> <td>상품 이름</td>  <td>상품 가격</td> <td>수량</td> <td>구매</td> </tr>");
+        out.print("<tr> <td>상품 번호</td> <td>상품 이름</td>  <td>상품 가격</td> <td>수량</td> <td>구매</td> <td>물품 삭제 버튼</td></tr>");
         out.print(str);
     
     
