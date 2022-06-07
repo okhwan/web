@@ -23,7 +23,9 @@ JSP 프로젝트는 매주 JSP_PROJECT 디렉터리에 파일을 추가해나가
 ### 아래는 각 jsp파일에 대한 순서를 나열했습니다.   
    
 
-![KakaoTalk_20220606_221403873](https://user-images.githubusercontent.com/95335311/172167746-7e14f0c8-40db-4dfd-b44d-a70cd6ddce98.jpg)
+![KakaoTalk_20220606_221403873](https://user-images.githubusercontent.com/95335311/172167746-7e14f0c8-40db-4dfd-b44d-a70cd6ddce98.jpg)   
+
+db.Conn에서 데이터베이스 연동을합니다.
 
 
    
