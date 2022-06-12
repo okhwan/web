@@ -30,7 +30,8 @@ db.Conn에서 데이터베이스 연동을합니다.
 ![jspdb](https://user-images.githubusercontent.com/95335311/173225180-f8ed5da9-0149-4519-8925-cddaf3506301.png)
 ![jspdb2](https://user-images.githubusercontent.com/95335311/173225183-f5228346-e2be-4394-913e-53d87b92c41a.png)
    
-Product 테이블에는 cell_id가 존재하여 판매자는 자신의 물품에 관해서만 데이터처리가 가능하게 만들었습니다.
+Product 테이블에는 cell_id가 존재하여 판매자는 자신의 물품에 관해서만 데이터처리가 가능하게 만들었습니다.   
+또한 해당 cell_id는 celler테이블에 id를 외래키로 지정하기 때문에 판매자가 아니면 절대 관여할 수 없습니다.   
 ## C
 Create로 물품을 추가, 판매자 id 생성 (celler 테이블), 구매자(members 테이블)   
 
