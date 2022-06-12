@@ -25,8 +25,12 @@ JSP 프로젝트는 매주 JSP_PROJECT 디렉터리에 파일을 추가해나가
 
 ![KakaoTalk_20220606_221403873](https://user-images.githubusercontent.com/95335311/172167746-7e14f0c8-40db-4dfd-b44d-a70cd6ddce98.jpg)   
 
-db.Conn에서 데이터베이스 연동을합니다.
-
+db.Conn에서 데이터베이스 연동을합니다.   
+   
+![jspdb](https://user-images.githubusercontent.com/95335311/173225180-f8ed5da9-0149-4519-8925-cddaf3506301.png)
+![jspdb2](https://user-images.githubusercontent.com/95335311/173225183-f5228346-e2be-4394-913e-53d87b92c41a.png)
+   
+Product 테이블에는 cell_id가 존재하여 판매자는 자신의 물품에 관해서만 데이터처리가 가능하게 만들었습니다.
 ## C
 Create로 물품을 추가, 판매자 id 생성 (celler 테이블), 구매자(members 테이블)   
 
