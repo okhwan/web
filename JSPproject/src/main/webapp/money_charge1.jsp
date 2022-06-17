@@ -26,6 +26,8 @@
 		out.print("<center>성공하였습니다!!" + "<br>현재 고객님이 소유하신 금액은: " +rs.getString("wallet"));
 		out.print("<table border='0'><tr><td><form action='Product_list.jsp' method='post'>"+
 				"<input type='submit' value='상품목록 가기'></form></td></tr></center>");
+		out.print("<table border='0'><tr><td><form action='money_charge.jsp' method='post'>"+
+				"<input type='submit' value='금액 더 충전하기'></form></td></tr></center>");
 	}
 		
     

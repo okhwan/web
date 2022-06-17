@@ -18,7 +18,7 @@
 			}
 			else if(f.uPW.value == "")
 			{
-				alert("수량을 입력해 주세요.");
+				alert("추가 수량을 입력해 주세요.(없으면 0)");
 				f.uPW.focus();
 				return false;
 			}
